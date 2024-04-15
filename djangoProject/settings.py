@@ -55,8 +55,11 @@ ROOT_URLCONF = 'djangoProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        # 该配置项指定了模板文件的存放位置
+        # 如果添加了该配置，会将根目录下的templates文件夹中模板文件的搜索优先级提高
+        # 其次再按照注册表顺序搜索每个app下的templates文件夹
+        # 'DIRS': [BASE_DIR / 'templates'],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
