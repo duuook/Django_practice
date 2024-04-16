@@ -5,6 +5,7 @@ from django.shortcuts import render, HttpResponse
 def index(request):
     return HttpResponse('Hello!')
 
+
 def login(request):
     """
     登录视图函数
@@ -15,6 +16,7 @@ def login(request):
     # 1.先搜索根目录下的templates文件夹
     # 2.再按注册表顺序搜索每个app下的templates文件夹
     return render(request, 'login.html')
+
 
 def register(request):
     return render(request, 'register.html')
