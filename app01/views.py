@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
-
+import requests
+from bs4 import BeautifulSoup
 
 # Create your views here.
 def index(request):
@@ -20,3 +21,19 @@ def login(request):
 
 def register(request):
     return render(request, 'register.html')
+
+
+def news(req):
+    # 向特定网页发送请求
+    response = requests.get('http://www.baidu.com')
+
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    # 提取所有的段落
+    paragraphs = soup.find_all('p')
+
+    # 打印每个段落
+    for p in paragraphs:
+        print(p.get_text().encode('utf-8'))
+
+    return render(req, 'news.html')
