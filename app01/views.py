@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse
 import requests
 from bs4 import BeautifulSoup
 
+
 # Create your views here.
 def index(request):
     return HttpResponse('Hello!')
@@ -27,13 +28,18 @@ def news(req):
     # 向特定网页发送请求
     response = requests.get('http://www.baidu.com')
 
+    response.encoding = 'utf-8'
+
     soup = BeautifulSoup(response.text, 'html.parser')
 
     # 提取所有的段落
     paragraphs = soup.find_all('p')
 
-    # 打印每个段落
-    for p in paragraphs:
-        print(p.get_text().encode('utf-8'))
+    # 将每个段落的文本存储到一个列表中
+    paragraph_texts = [p.get_text() for p in paragraphs]
 
-    return render(req, 'news.html')
+    # 获取所有的文字信息
+    text = soup.get_text()
+
+    # 将段落列表传递给模板
+    return render(req, 'news.html', {'text': text, 'paragraphs': paragraph_texts, 'title': '百度新闻'})
