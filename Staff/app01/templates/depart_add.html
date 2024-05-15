@@ -3,18 +3,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
     <link rel="stylesheet" href="{% static 'plugins/bootstrap-3.4.1/css/bootstrap.min.css' %}">
     <style>
         .navbar {
             border-radius: 10px;
         }
     </style>
+    <title>Title</title>
 </head>
 <body>
-<!-- As a link -->
 
-{#导航条编写#}
 <nav class="navbar navbar-default">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -61,50 +59,38 @@
 
 <div>
     <div class="container">
-        {#   新建部门按钮     #}
-        <div style="margin-bottom: 10px">
-            <a href="/depart/add/" class="btn btn-success" target="_blank">
-                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="margin-right: 5px">
-                </span>
-                添加部门
-            </a>
-        </div>
-
-        {#     部门列表展示     #}
         <div class="panel panel-default">
-            <!-- Default panel contents -->
-            <div class="panel-heading" style="margin-right: 5px">
-                <span class="glyphicon glyphicon-th-list" aria-hidden="true" style="margin-right: 5px"></span>
-                部门列表
+            <div class="panel-heading">
+                <h3 class="panel-title">新建部门</h3>
             </div>
+            <div class="panel-body">
+                {#  提交信息的表单结构  #}
+                <form class="form-horizontal" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">部门名称</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputPassword3" placeholder="depart">
+                        </div>
+                    </div>
+                    <div class="form-group">
 
-            <!-- Table -->
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>部门名称</th>
-                    <th>操作</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for obj in query_set %}
-                <tr>
-                    <th scope="row">{{ obj.id }}</th>
-                    <td>{{ obj.title }}</td>
-                    <td>
-                        <a href="/depart/edit/1/" class="btn btn-primary btn-xs">编辑</a>
-                        <a href="/depart/del/1/" class="btn btn-danger btn-xs">删除</a>
-                    </td>
-                </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">保 存</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
+
 </div>
 
 <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
 <script src="{% static 'plugins/bootstrap-3.4.1/js/bootstrap.min.js' %}"></script>
+
+
 </body>
 </html>
