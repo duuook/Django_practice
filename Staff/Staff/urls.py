@@ -19,6 +19,15 @@ import app01.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # 部门管理
     path('depart/list/', app01.views.depart_list),
     path('depart/add/', app01.views.depart_add),
+    path('depart/delete/', app01.views.depart_delete),
+    # 中间加入一个参数，则在视图函数中也要加入一个参数
+    # 比如http://localhost:8000/depart/1/edit/
+    path('depart/<int:nid>/edit/', app01.views.depart_edit),
+
+    # 员工管理
+    path('user/list/', app01.views.user_list),
 ]

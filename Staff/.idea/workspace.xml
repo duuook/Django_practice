@@ -5,24 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7345f200-8494-4d34-9c89-a548af6e63e8" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Staff.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Staff.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Staff/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Staff/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app01/templates/depart_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/app01/templates/depart_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app01/templates/depart_list.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app01/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app01/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app01/templates/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app01/templates/user_list.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app01/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practice/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practice/.idea/djangoProject.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practice/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practice/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practice/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practice/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practice/.idea/vcs.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -34,31 +32,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2gVagATrZiIi51Uyu6sbPOh6jwa" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django 服务器.Staff.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django 服务器.Staff.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Staff" type="Python.DjangoServer" factoryName="Django server">
       <module name="Staff" />
@@ -103,6 +101,8 @@
       <option name="presentableId" value="Default" />
       <updated>1715785310468</updated>
       <workItem from="1715785311654" duration="3873000" />
+      <workItem from="1715855847984" duration="9000" />
+      <workItem from="1715855972544" duration="12706000" />
     </task>
     <servers />
   </component>
