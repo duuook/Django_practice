@@ -54,8 +54,8 @@ def depart_edit(request, nid):
         return render(request, 'depart_edit.html', {'depart_name': obj.title})
 
     # 如果是POST请求，修改数据库中的数据
-    deaprt_name = request.POST.get('Depart')
-    models.Department.objects.filter(id=nid).update(title=deaprt_name)
+    depart_name = request.POST.get('Depart')
+    models.Department.objects.filter(id=nid).update(title=depart_name)
 
     return redirect('/depart/list/')
 
