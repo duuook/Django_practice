@@ -67,6 +67,6 @@ def user_list(request):
     query_set = models.UserInfo.objects.all()
 
     # 获取所有部门信息
-    depart_list = models.Department.objects.all()
+    depart = models.Department.objects.all()
 
-    return render(request, 'user_list.html', {'query_set': query_set, 'depart_list': depart_list})
+    return render(request, 'user_list.html', {'query_set': query_set, 'depart_list': depart})
