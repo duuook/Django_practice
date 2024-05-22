@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from app01 import models
+from django.utils import timezone
 import json
 
 
@@ -70,3 +71,41 @@ def user_list(request):
     depart = models.Department.objects.all()
 
     return render(request, 'user_list.html', {'query_set': query_set, 'depart_list': depart})
+
+
+def user_add(request):
+    """添加员工"""
+
+    # GET请求
+    if request.method == 'GET':
+        context = {
+            'depart_list': models.Department.objects.all(),
+            'gender_choice': models.UserInfo.gender_choices
+        }
+        return render(request, 'user_add.html', context)
+
+    # POST请求
+    user_name = request.POST.get('name')
+    age = request.POST.get('age')
+    pwd = request.POST.get('pwd')
+    salary = request.POST.get('ac')
+
+    ctime = request.POST.get('ctime')
+    print(ctime)
+    ctime = timezone.datetime.strptime(ctime, "%Y-%m-%d")
+
+    gender_id = request.POST.get('gd')
+    depart_id = request.POST.get('dp')
+
+    # 添加用户进入数据库
+    models.UserInfo.objects.create(
+        name=user_name,
+        age=age,
+        password=pwd,
+        salary=salary,
+        create_time=ctime,
+        depart_id=depart_id,
+        gender=gender_id
+    )
+
+    return redirect('/user/list/')

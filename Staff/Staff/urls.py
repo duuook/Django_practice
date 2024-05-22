@@ -30,4 +30,5 @@ urlpatterns = [
 
     # 员工管理
     path('user/list/', app01.views.user_list),
+    path('user/add/', app01.views.user_add),
 ]
