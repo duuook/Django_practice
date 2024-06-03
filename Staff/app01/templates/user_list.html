@@ -9,6 +9,11 @@
                 </span>
                 添加人员
             </a>
+            <a href="/user/model/form/add/" class="btn btn-success">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="margin-right: 5px">
+                </span>
+                添加人员model_form
+            </a>
         </div>
 
         {#     部门列表展示     #}
@@ -45,7 +50,7 @@
                         <td style="text-align: center;">
                             {{ obj.create_time|date:"Y-m-d H:i:s" }}
                         </td>
-{#                        要加括号的地方都不需要加括号#}
+                        {#                        要加括号的地方都不需要加括号#}
                         <td style="text-align: center;">{{ obj.get_gender_display }}</td>
                         <td style="text-align: center;">
                             {{ obj.depart.title }}

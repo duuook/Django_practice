@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7345f200-8494-4d34-9c89-a548af6e63e8" name="更改" comment="修改错误命名">
+    <list default="true" id="7345f200-8494-4d34-9c89-a548af6e63e8" name="更改" comment="添加用户页面功能实现">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Staff/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Staff/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Staff/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Staff/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app01/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/app01/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app01/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app01/templates/user_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app01/templates/user_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app01/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/views.py" afterDir="false" />
     </list>
@@ -56,6 +57,7 @@
     &quot;Django 服务器.Staff.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -63,6 +65,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -115,7 +118,27 @@
       <workItem from="1715916916660" duration="1649000" />
       <workItem from="1716172631208" duration="706000" />
       <workItem from="1716177943325" duration="18000" />
-      <workItem from="1716385847337" duration="4994000" />
+      <workItem from="1716385847337" duration="5344000" />
+      <workItem from="1716391222327" duration="8000" />
+      <workItem from="1716433455344" duration="3920000" />
+      <workItem from="1716720144555" duration="12000" />
+      <workItem from="1717072727648" duration="3000" />
+      <workItem from="1717078798991" duration="341000" />
+      <workItem from="1717079158515" duration="244000" />
+      <workItem from="1717081249387" duration="13000" />
+      <workItem from="1717081269985" duration="2000" />
+      <workItem from="1717081401688" duration="3000" />
+      <workItem from="1717081682160" duration="64000" />
+      <workItem from="1717082209740" duration="153000" />
+      <workItem from="1717082656865" duration="1292000" />
+      <workItem from="1717211502648" duration="2286000" />
+      <workItem from="1717226527744" duration="10000" />
+      <workItem from="1717226732052" duration="56000" />
+      <workItem from="1717303218226" duration="704000" />
+      <workItem from="1717311257411" duration="14000" />
+      <workItem from="1717313581347" duration="1123000" />
+      <workItem from="1717315837617" duration="4347000" />
+      <workItem from="1717338609817" duration="2927000" />
     </task>
     <task id="LOCAL-00001" summary="重命名冲突变量名">
       <option name="closed" value="true" />
@@ -133,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715917190163</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加用户页面功能实现">
+      <option name="closed" value="true" />
+      <created>1716390908972</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716390908972</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +173,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="重命名冲突变量名" />
     <MESSAGE value="修改错误命名" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改错误命名" />
+    <MESSAGE value="添加用户页面功能实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加用户页面功能实现" />
   </component>
 </project>

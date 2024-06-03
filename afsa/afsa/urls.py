@@ -1,4 +1,4 @@
-"""Staff URL Configuration
+"""afsa URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,21 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import app01.views
+from app01 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('afsa/', views.index),
+    path('welcome/', views.welcome),
 
-    # 部门管理
-    path('depart/list/', app01.views.depart_list),
-    path('depart/add/', app01.views.depart_add),
-    path('depart/delete/', app01.views.depart_delete),
-    # 中间加入一个参数，则在视图函数中也要加入一个参数
-    # 比如http://localhost:8000/depart/1/edit/
-    path('depart/<int:nid>/edit/', app01.views.depart_edit),
+    # 分析结果页面
+    path('analysis_result/', views.analysis_result),
 
-    # 员工管理
-    path('user/list/', app01.views.user_list),
-    path('user/add/', app01.views.user_add),
-    path('user/model/form/add/', app01.views.user_model_form_add),
+    # 信息库
+    path('fraud_phone_number/', views.fraud_phone_number_list),
+    path('fraud_email/', views.fraud_email_list),
+    path('fraud_ip/', views.fraud_ip_list),
+
+    # ajax提交测试
+    path('ajax/', views.ajax),
 ]

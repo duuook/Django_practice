@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from app01 import models
 from django.utils import timezone
-import json
+from django import forms
 
 
 # Create your views here.
@@ -109,3 +109,37 @@ def user_add(request):
     )
 
     return redirect('/user/list/')
+
+
+class UserModelForm(forms.ModelForm):
+    create_time = forms.DateTimeField(
+        label='创建时间',
+        widget=forms.DateTimeInput(attrs={'type': 'date', 'class': 'form-control'}),
+        input_formats=['%Y-%m-%d']
+    )
+
+    class Meta:
+        model = models.UserInfo
+        fields = ['name', 'age', 'password', 'salary', 'create_time', 'depart', 'gender']
+
+    def __init__(self, *args, **kwargs):
+        super(UserModelForm, self).__init__(*args, **kwargs)
+        for name, field in self.fields.items():
+            if name != 'create_time':
+                field.widget.attrs = {'class': 'form-control'}
+            if name == 'name':
+                # 设置输入的最长长度
+                field.widget.attrs = {'class': 'form-control', 'maxlength': '3'}
+
+
+def user_model_form_add(request):
+    """使用ModelForm添加数据"""
+    if request.method == 'GET':
+        form = UserModelForm()
+        return render(request, 'user_model_form_add.html', {'form': form})
+
+    form = UserModelForm(request.POST)
+    if form.is_valid():
+        form.save()
+        return redirect('/user/list/')
+    return render(request, 'user_model_form_add.html', {'form': form})

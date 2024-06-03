@@ -5,7 +5,11 @@ from django.db import models
 class Department(models.Model):
     """部门表"""
     title = models.CharField(max_length=32, verbose_name='部门名称')  # 部门名称
+
     # code = models.BigAutoField(max_length=32, verbose_name='部门编号')  # 部门编号
+
+    def __str__(self):
+        return self.title
 
 
 class UserInfo(models.Model):
@@ -14,7 +18,7 @@ class UserInfo(models.Model):
     age = models.IntegerField(verbose_name='年龄')  # 年龄
     password = models.CharField(max_length=32, verbose_name='密码')  # 密码
     salary = models.DecimalField(max_digits=8, decimal_places=2, verbose_name='薪资', default=0)  # 薪资
-    create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')  # 创建时间
+    create_time = models.DateTimeField(verbose_name='创建时间')  # 创建时间
 
     # 产生外键约束，实现多表联合
     # 1. to='Department'：关联的表
@@ -23,7 +27,7 @@ class UserInfo(models.Model):
     # 4. verbose_name='部门编号'：字段名
     # 在django中，外键字段默认会在字段名后面加_id
     depart = models.ForeignKey(to='Department', to_field="id", on_delete=models.CASCADE,
-                               verbose_name='部门编号')  # 部门ID
+                               verbose_name='部门')  # 部门ID
 
     # 置空
     # depart = models.ForeignKey(to='Department', to_field="部门编号", on_delete=models.SET_NULL,null=True,blank=True)
